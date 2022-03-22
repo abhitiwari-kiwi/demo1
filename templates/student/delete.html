@@ -1,0 +1,6 @@
+<form action="{% url 'delete' book.id %}" method="DELETE">
+    {% csrf_token %}
+    <p>Are you sure you want to delete this entry?</p>
+    <input type="submit" value="Yes">
+    <button type="button"><a href="{% url 'home' %}">No</a></button>
+</form>
